@@ -75,3 +75,8 @@ Frank.export.path = "exported"
 #
 # Add any other project setup code, or requires here
 # ....
+
+Compass.configuration do |config|
+  config.project_path = File.dirname(__FILE__)
+  config.sass_dir = "#{Frank.dynamic_folder}/stylesheets"
+end
