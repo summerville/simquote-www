@@ -1,7 +1,143 @@
+// Grays
+// -------------------------
+
+$black: #000 ! default;
+$grayDarker: #222 ! default;
+$grayDark: #333 ! default;
+$gray: #555 ! default;
+$grayLight: #999 ! default;
+$grayLighter: #E8E8E8 ! default;
+$grayLightest: #F2F2F2 ! default;
+$white: #fff ! default;
+
+// Accent colors
+// ----------------------------
+
+$blue: #04AFE5 ! default;
+$blueDark: #0B80C5 ! default;
+$green: #88B540 ! default;
+$greenLight: #B8D338 ! default;
+$red: #9d261d ! default;
+$yellow: #ffc40d ! default;
+$orange: #f89406 ! default;
+$pink: #c3325f ! default;
+$purple: #7a43b6 ! default;
+
+// Links
+// -------------------------
+
+$linkColor: #0B80C5 ! default;
+$linkColorHover: #04AFE5 ! default;
+
+// Navbar
+// -------------------------
+
+$navbarHeight: 68px ! default;
+$navbarBackground: $white ! default;
+$navbarBackgroundHighlight: $grayLightest ! default;
+$navbarLinkColor: $gray ! default;
+$navbarLinkColorHover: $green ! default;
+$navbarLinkColorActive: $navbarLinkColorHover ! default;
+
+// Hero unit
+// -------------------------
+
+$heroUnitBackground: $grayLightest ! default;
+$heroUnitHeadingColor: inherit ! default;
+$heroUnitLeadColor: inherit ! default;
+
+// Sprite icons path
+// -------------------------
+
+$iconSpritePath: url('../images/glyphicons-halflings.png');
+$iconWhiteSpritePath: url('../images/glyphicons-halflings-white.png');
+
+// Imports
+// -------------------------
+
 @import "compass";
 @import "bootstrap";
 
+// Floating & Alignment
+// -------------------------
+
+.fl { float: left; }
+.fr { float: right; }
+.ac { text-align: center; }
+.ar { text-align: right; }
+
+// Scaffolding + Components
+// -------------------------
 
 body {
-  background: white;
+  padding-top: $navbarHeight
+}
+
+.navbar-fixed-top {
+
+  .brand {
+    padding-bottom: 8px;
+  }
+
+  .navbar-inner {
+    @include box-shadow(none);
+    border-bottom: 2px solid $grayLighter;
+  }
+
+  .nav {
+    margin-top: 14px;
+
+    > li {
+      margin-left: 8px;
+
+      > a {
+        font-size: 14px;
+        text-shadow: none;
+      }
+
+      > a, > a.btn.disabled {
+        color: $navbarLinkColor;
+        cursor: pointer;
+      }
+
+      > a.btn {
+        margin-top: 4px;
+        padding: 5px 14px 6px;
+      }
+
+      > a.btn.disabled {
+        background-color: transparent;
+        border: 1px solid $green;
+      }
+  }
+  }
+}
+
+.hero-unit {
+  @include border-radius(0px);
+  border-bottom: 1px solid $grayLighter;
+}
+
+footer {
+  background: $grayDarker;
+  color: $grayLight;
+  margin-top: $baseLineHeight;
+  padding-top: $baseLineHeight;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $grayLight;
+  }
+
+  a, a:hover {
+    color: $white;
+  }
+
+  #footer-floor {
+    background: $black;
+    padding-top: $baseLineHeight / 2;
+
+    h3, h4 {
+      color: $white;
+    }
+  }
 }

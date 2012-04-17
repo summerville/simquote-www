@@ -1,8 +1,88 @@
-!!! Strict
-%html
+!!! 5
+%html{ lang: 'en' }
   %head
-    %title Frank's on the scene.
-    %link{:rel=>'stylesheet', :type=>'text/css', :href=>'/stylesheets/simquote-www.css'}
-  %body
-    #wrapper
-      = yield
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}/
+    %title= "#{defined?(title) ? title + ' | ' : ''}SimQuote"
+    /[if lt IE 9]
+      %script(src='//html5shim.googlecode.com/svn/trunk/html5.js')
+    %link{ rel: 'stylesheet', type: 'text/css', href: '//fonts.googleapis.com/css?family=Droid+Sans:400,700'}
+    %link{ rel: 'stylesheet', type: 'text/css', href: '/stylesheets/simquote-www.css' }
+  %body{ id: (defined?(active_nav_link) ? active_nav_link : '') }
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a{ class: 'brand', href: '/', title: 'SimQuote' }
+            %img{ src: '/images/simquote-logo.png', alt: 'SimQuote Logo', width: '105', height: '51' }
+          %ul.nav
+            - active_nav_link = nil if !defined?(active_nav_link)
+            %li
+              %a{:href => '/', :class => nav_link_class(:home, active_nav_link)}
+                Home
+            %li
+              %a{:href => '/tour', :class => nav_link_class(:tour, active_nav_link)}
+                Tour
+            %li
+              %a{:href => '/pricing', :class => nav_link_class(:pricing, active_nav_link)}
+                Pricing
+            %li
+              %a{:href => '/why', :class => nav_link_class(:why, active_nav_link)}
+                Why SimQuote?
+            %li
+              %a{:href => '/about', :class => nav_link_class(:about, active_nav_link)}
+                About
+    = yield
+    %footer
+      .container
+        .row
+          .span4
+            %h4 Navigation
+            %ul.unstyled
+              %li
+                %a{ href: '/' } Home
+              %li
+                %a{ href: '/tour' } Feature Tour
+              %li
+                %a{ href: '/pricing' } Pricing
+              %li
+                %a{ href: '/why'} Why SimQuote?
+              %li
+                %a{ href: '/about' } About
+
+          .span4
+            %h4 More
+            %ul.unstyled
+              %li
+                %a{ href: '/' } More Link 1
+              %li
+                %a{ href: '/' } More Link 2
+              %li
+                %a{ href: '/' } More Link 3
+              %li
+                %a{ href: '/' } More Link 4
+
+          .span4
+            %h4 Contact Us
+            %ul.unstyled
+              %li
+                %h5
+                  %a{ href: 'mailto:support@simquote.com' }
+                    %i.icon-envelope.icon-white
+                    support@simquote.com
+              %li
+                %h5
+                  %i.icon-comment.icon-white
+                  1-800-123-4567
+
+      #footer-floor
+        .container
+          .row
+            .span12
+              %p
+                &copy; #{Date.today.year} SimQuote, LLC.
+                All rights reserved.
+                &nbsp;
+                %a{:href => '/terms'}>Terms
+                &nbsp;&&nbsp;
+                %a{:href => '/privacy'}>Privacy
+                \.
+    = content_for(:javascript)
