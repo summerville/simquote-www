@@ -67,7 +67,7 @@ Frank.export.path = "exported"
 
 # ----------------------
 # Sass Options:
-# Frank.sass_options = { :load_paths => [ File.join(File.dirname(__FILE__), 'dynamic/css') ] }
+Frank.sass_options = { :style => :compressed }
 
 
 # ----------------------
