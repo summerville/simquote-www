@@ -176,3 +176,9 @@ footer {
   line-height: normal;
   @include border-radius(6px);
 }
+
+.big-quote {
+  background: transparent url('../images/big-quote.png') no-repeat left top;
+  border-left: none;
+  padding-left: 90px;
+}
