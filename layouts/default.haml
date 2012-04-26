@@ -30,11 +30,14 @@
             %li
               %a{:href => '/about', :class => nav_link_class(:about, active_nav_link)}
                 About
+            %li
+              %a{:href => '/login', :class => 'btn btn-primary'}
+                Log In
     = yield
     %footer
       .container
         .row
-          .span4
+          .span8
             %h4 Navigation
             %ul.unstyled
               %li
@@ -48,21 +51,27 @@
               %li
                 %a{ href: '/about' } About
 
-          .span4
-            %h4 More
-            %ul.unstyled
-              %li
-                %a{ href: '/' } More Link 1
-              %li
-                %a{ href: '/' } More Link 2
-              %li
-                %a{ href: '/' } More Link 3
-              %li
-                %a{ href: '/' } More Link 4
+          -#
+            .span4
+              %h4 More
+              %ul.unstyled
+                %li
+                  %a{ href: '/' } More Link 1
+                %li
+                  %a{ href: '/' } More Link 2
+                %li
+                  %a{ href: '/' } More Link 3
+                %li
+                  %a{ href: '/' } More Link 4
 
           .span4
             %h4 Contact Us
             %ul.unstyled
+              %li
+                %h5
+                  %a{ href: 'http://simquote.desk.com' }
+                    %i.icon-question-sign.icon-white
+                    Support Center
               %li
                 %h5
                   %a{ href: 'mailto:support@simquote.com' }
@@ -71,7 +80,7 @@
               %li
                 %h5
                   %i.icon-comment.icon-white
-                  1-800-123-4567
+                  (908) 443-1125
 
       #footer-floor
         .container

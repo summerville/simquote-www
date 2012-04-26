@@ -32,6 +32,9 @@ $linkColorHover: #04AFE5 ! default;
 // Buttons
 // -------------------------
 
+$btnPrimaryBackground: $blue ! default;
+$btnPrimaryBackgroundHighlight: adjust-hue($btnPrimaryBackground, 15%) ! default;
+
 $btnSuccessBackground: #99CC48 ! default;
 $btnSuccessBackgroundHighlight: #88B540 ! default;
 
@@ -108,6 +111,15 @@ body {
       > a.btn {
         margin-top: 4px;
         padding: 5px 14px 6px;
+
+        &.btn-primary {
+          color: $white;
+        }
+
+        // Fixes weird hover issue for buttons in the navbar
+        &:hover {
+          background-position: 0 0;
+        }
       }
 
       > a.btn.disabled {
@@ -123,7 +135,7 @@ body {
   border-bottom: 1px solid $grayLighter;
 
   #home & {
-    padding-bottom: 0;
+    padding: ($baseLineHeight * 2) 0;
     h1 {
       font-size: 40px;
       margin-bottom: $baseLineHeight;
