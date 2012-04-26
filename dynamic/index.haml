@@ -90,27 +90,25 @@ META----------------------------------------------------------------------------
             Access from your smartphone, iPad or laptop plus you can have multiple users all working
             at the same time.
   %hr/
-  .row
-    .span8
-      %blockquote.big-quote
-        %h2
-          Quote from customer about the improvement in interaction, speed, accuracy and payments.
-        %small
-          John Doe,
-          %a{:href => '#', :target => '_blank', :title => ''}
-            Some Company
-    .span4
-      .well
-        %ul.unstyled
-          %li
-            %h3
-              %a{:href => '/tour', :title => ''} Take a tour
-              &rarr;
-          %li
-            %h3
-              %a{:href => '/pricing', :title => ''} Check out our pricing
-              &rarr;
-          %li
-            %h3
-              %a{:href => '', :title => ''} Sign up for free
-              &rarr;
+
+  %blockquote.big-quote
+    %h2
+      Quote from customer about the improvement in interaction, speed, accuracy and payments.
+    %small
+      John Doe,
+      %a{:href => '#', :target => '_blank', :title => ''}
+        Some Company
+  .well.well-small
+    %ul.pager{style: 'margin-bottom:0'}
+      %li
+        %a{:href => '/tour', :title => ''}
+          %i.icon-eye-open
+          Take a tour
+      %li
+        %a{:href => '/tour', :title => ''}
+          %i.icon-shopping-cart
+          Check out our pricing
+      %li
+        %a{:href => '/tour', :title => ''}
+          %i.icon-check
+          Sign up for free
