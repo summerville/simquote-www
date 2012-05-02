@@ -55,6 +55,12 @@ $heroUnitBackground: $grayLightest ! default;
 $heroUnitHeadingColor: inherit ! default;
 $heroUnitLeadColor: inherit ! default;
 
+// Alerts
+// -------------------------
+
+$successText: #60802D ! default;
+$successBackground: #D7EAB8 ! default;
+
 // Sprite icons path
 // -------------------------
 
@@ -133,12 +139,36 @@ body {
 .hero-unit {
   @include border-radius(0px);
   border-bottom: 1px solid $grayLighter;
+  padding: ($baseLineHeight * 2) 0;
+
+  h1, h2, h3 {
+    color: $grayDark;
+    margin-bottom: $baseLineHeight;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+    color: $grayLight;
+    margin-top: $baseLineHeight;
+  }
+
+  .last {
+    margin-bottom: 0;
+  }
 
   #home & {
-    padding: ($baseLineHeight * 2) 0;
     h1 {
       font-size: 40px;
-      margin-bottom: $baseLineHeight;
     }
   }
 }
