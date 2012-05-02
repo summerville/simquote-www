@@ -221,3 +221,27 @@ footer {
   border-left: none;
   padding-left: 90px;
 }
+
+ol.sequence {
+  background-color: $white;
+  border: 1px solid $grayLighter;
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: $baseLineHeight;
+  @include clearfix();
+  @include border-radius(4px);
+
+  li {
+    border-left: 1px solid $grayLighter;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    width: 158px;
+    overflow: visible;
+    position: relative;
+
+    &.first {
+      border-left: none;
+    }
+  }
+}
