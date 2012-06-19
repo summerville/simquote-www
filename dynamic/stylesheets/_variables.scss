@@ -1,0 +1,68 @@
+// Grays
+// -------------------------
+
+$black: #000 ! default;
+$grayDarker: #222 ! default;
+$grayDark: #333 ! default;
+$gray: #555 ! default;
+$grayLight: #999 ! default;
+$grayLighter: #E8E8E8 ! default;
+$grayLightest: #F2F2F2 ! default;
+$white: #fff ! default;
+
+// Accent colors
+// ----------------------------
+
+$blue: #04AFE5 ! default;
+$blueDark: #0B80C5 ! default;
+$green: #88B540 ! default;
+$greenLight: #B8D338 ! default;
+$red: #9d261d ! default;
+$yellow: #ffc40d ! default;
+$orange: #f89406 ! default;
+$pink: #c3325f ! default;
+$purple: #7a43b6 ! default;
+
+// Links
+// -------------------------
+
+$linkColor: #0B80C5 ! default;
+$linkColorHover: #04AFE5 ! default;
+
+// Buttons
+// -------------------------
+
+$btnPrimaryBackground: $blue ! default;
+$btnPrimaryBackgroundHighlight: adjust-hue($btnPrimaryBackground, 15%) ! default;
+
+$btnSuccessBackground: #99CC48 ! default;
+$btnSuccessBackgroundHighlight: #88B540 ! default;
+
+// Navbar
+// -------------------------
+
+$navbarHeight: 68px ! default;
+$navbarBackground: $white ! default;
+$navbarBackgroundHighlight: $grayLightest ! default;
+$navbarLinkColor: $gray ! default;
+$navbarLinkColorHover: $green ! default;
+$navbarLinkColorActive: $navbarLinkColorHover ! default;
+
+// Hero unit
+// -------------------------
+
+$heroUnitBackground: $grayLightest ! default;
+$heroUnitHeadingColor: inherit ! default;
+$heroUnitLeadColor: inherit ! default;
+
+// Alerts
+// -------------------------
+
+$successText: #60802D ! default;
+$successBackground: #D7EAB8 ! default;
+
+// Sprite icons path
+// -------------------------
+
+$iconSpritePath: url('../images/glyphicons-halflings.png');
+$iconWhiteSpritePath: url('../images/glyphicons-halflings-white.png');
