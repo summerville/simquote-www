@@ -67,7 +67,8 @@ Frank.export.path = "exported"
 
 # ----------------------
 # Sass Options:
-Frank.sass_options = { :style => :compressed }
+#Frank.sass_options = { :style => :compressed }
+Frank.sass_options = { :style => :expanded }
 
 
 # ----------------------
